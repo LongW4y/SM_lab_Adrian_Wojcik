@@ -138,6 +138,7 @@ int main(void)
 	  	  ADC_voltage[ADC_POT2] = ((float)ADC_measurement[ADC_POT2] / (float)ADC_REG_MAX) * ADC_VOLTAGE_MAX;
 		  ADC_voltage_mV[ADC_POT2] = (uint32_t)(1000.0 * ADC_voltage[ADC_POT2]);
 	  }
+	  HAL_ADC_Stop(&hadc1);
 	  HAL_Delay(100);
     /* USER CODE END WHILE */
 
